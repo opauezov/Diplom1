@@ -14,7 +14,7 @@ public class IngredientTypeTest {
         this.nameIngredientType = stringIngredientType;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Тестовые данные: {1}")
     public static Object[][] getParameters() {
         return new Object[][]{
                 {IngredientType.SAUCE, "SAUCE"},
@@ -23,7 +23,7 @@ public class IngredientTypeTest {
     }
 
     @Test
-    public void shouldReturnsCorrectEnumType(){
-        Assert.assertEquals("Ошибка! Ожидается - " + ingredientType ,ingredientType, IngredientType.valueOf(nameIngredientType));
+    public void shouldReturnsCorrectEnumType() {
+        Assert.assertEquals("Ошибка! Ожидается - " + ingredientType, ingredientType, IngredientType.valueOf(nameIngredientType));
     }
 }

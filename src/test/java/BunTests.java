@@ -12,12 +12,12 @@ public class BunTests {
     }
 
     @Test
-    public void getNameShouldReturnsBunName(){
-        Assert.assertEquals("Ошибка! Неверная модель булочки для бургера.", "Флюоресцентная булка R2-D3" , bun.getName());
+    public void getNameShouldReturnsBunName() {
+        Assert.assertEquals("Ошибка! Неверная модель булочки для бургера.", "Флюоресцентная булка R2-D3", bun.getName());
     }
 
     @Test
-    public void getPriceShouldReturnsBunPrice(){
+    public void getPriceShouldReturnsBunPrice() {
         Assert.assertEquals("Ошибка! Неверная цена модели булочки для бургера.", 86.50f, bun.getPrice(), 0);
     }
 }

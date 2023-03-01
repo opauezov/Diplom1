@@ -21,9 +21,9 @@ public class IngredientTests {
         this.price = price;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Тестовые данные: {0}")
     public static Object[][] getParameters() {
-        return new Object[][] {
+        return new Object[][]{
                 {IngredientType.SAUCE, "Космонез", 7.40f},
                 {IngredientType.FILLING, "Джедипеньё", 8.50f}
         };
@@ -35,7 +35,7 @@ public class IngredientTests {
     }
 
     @Test
-    public void getPriceShouldReturnsIngredientsPrice(){
+    public void getPriceShouldReturnsIngredientsPrice() {
         Assert.assertEquals("Ошибка! Ожидается цена - " + price, price, ingredient.getPrice(), 0);
     }
 
@@ -45,7 +45,7 @@ public class IngredientTests {
     }
 
     @Test
-    public void getTypeShouldReturnsIngredientsType(){
+    public void getTypeShouldReturnsIngredientsType() {
         Assert.assertEquals("Ошибка! Неверный тип ингридиента - " + ingredientType, ingredientType, ingredient.getType());
     }
 
